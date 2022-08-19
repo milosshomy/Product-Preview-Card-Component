@@ -31,15 +31,10 @@ main {
 }
 
 .container {
-  display: flex;
+  display: grid;
   border-radius: 20px;
   background-color: var(--white-clr);
-  max-width: 100%;
-}
-
-.left-side,
-.right-side {
-  flex-grow: 1;
+  grid-template-columns: 1fr 1fr;
 }
 
 .left-side img {
@@ -132,6 +127,6 @@ main {
 
 @media all and (max-width: 414px) {
   .container {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
 }
