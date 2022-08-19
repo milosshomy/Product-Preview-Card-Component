@@ -1,0 +1,137 @@
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan-clr: hsl(158, 36%, 37%);
+  --cream-clr: hsl(30, 38%, 92%);
+  --very-dark-blue-clr: hsl(212, 21%, 14%);
+  --dark-grayish-blue-clr: hsl(228, 12%, 48%);
+  --white-clr: hsl(0, 0%, 100%);
+  --fs: 14px;
+  --heading-ff: "Fraunces", serif;
+  --text-ff: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--cream-clr);
+  font-size: var(--fs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 500px;
+}
+
+.container {
+  display: flex;
+  border-radius: 20px;
+  background-color: var(--white-clr);
+  max-width: 100%;
+}
+
+.left-side,
+.right-side {
+  flex-grow: 1;
+}
+
+.left-side img {
+  max-width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+}
+
+.wrapper {
+  padding: 30px;
+}
+
+.sub-title {
+  color: var(--dark-grayish-blue-clr);
+  font-family: var(--text-ff);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--heading-ff);
+  color: var(--very-dark-blue-clr);
+  margin-bottom: 20px;
+}
+
+.text {
+  color: var(--dark-grayish-blue-clr);
+  font-family: var(--text-ff);
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-family: var(--heading-ff);
+  color: var(--dark-cyan-clr);
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue-clr);
+}
+
+.btn {
+  background-color: var(--dark-cyan-clr);
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0px;
+  color: var(--white-clr);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms ease-in;
+}
+
+.btn:hover {
+  background-color: hsl(158, 37%, 50%);
+}
+
+.btn img {
+  margin-right: 10px;
+}
+
+.cart {
+  font-family: var(--text-ff);
+  font-weight: 500;
+}
+
+@media all and (max-width: 768px) {
+  main {
+    padding: 0px 12px;
+  }
+}
+
+@media all and (max-width: 414px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
